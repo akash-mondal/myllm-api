@@ -8,7 +8,7 @@ app = FastAPI()
 async def root():
     return {"greeting": "Hello, World!", "message": "Welcome to FastAPI!"}
 
-@app.post("/generate-response")
+@app.post("/ask")
 async def generate_response(user_input: str):
     url = "https://api.fireworks.ai/inference/v1/chat/completions"
     payload = {
